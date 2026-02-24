@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lu Abbey | IT Security & Cybersecurity Expert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: #0f172a;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #3b82f6;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 5rem 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            color: #3b82f6;
+            border-bottom: 4px solid #3b82f6;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid #3b82f6;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        /* Social Bar */
+        .social-bar {
+            background: #1e293b;
+            padding: 1rem 0;
+            border-bottom: 1px solid #334155;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .social-links a:hover {
+            color: white;
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 4rem;
+            font-size: 1.25rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            border-color: #3b82f6;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: #0f172a;
+        }
+
+        .service-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 6rem;
+            color: #3b82f6;
+            opacity: 0.2;
+            font-family: serif;
+        }
+
+        .testimonial-content {
+            font-size: 1rem;
+            color: #475569;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .author-info p {
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+
+        .project-location {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* Courses Grid */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .course-card {
+            background: #f8fafc;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border-left: 4px solid;
+            transition: transform 0.2s;
+        }
+
+        .course-card.it-support { border-color: #3b82f6; }
+        .course-card.cybersecurity { border-color: #dc2626; }
+        .course-card.programming { border-color: #8b5cf6; }
+
+        .course-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .course-card p {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #e2e8f0;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .course-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Blog Preview Section - 9 Tabs */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .blog-tab {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+        }
+
+        .blog-tab:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            border-color: #3b82f6;
+        }
+
+        .blog-tab-image {
+            height: 140px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .blog-tab-content {
+            padding: 1.25rem;
+        }
+
+        .blog-tab-date {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-tab-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+            line-height: 1.4;
+        }
+
+        .blog-tab-excerpt {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-tab-link {
+            color: #3b82f6;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .blog-tab-link:hover {
+            gap: 0.5rem;
+        }
+
+        .view-all-blog {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        /* Ebooks Grid */
+        .ebooks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .ebooks-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .ebook-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .ebook-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            border-color: #3b82f6;
+        }
+
+        .ebook-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .ebook-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .ebook-card p {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            min-height: 60px;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+        }
+
+        .about-content p {
+            color: #475569;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            background: #e2e8f0;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #0f172a;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            border-radius: 1rem;
+            padding: 3rem;
+            color: white;
+            text-align: center;
+        }
+
+        .about-image .emoji {
+            font-size: 6rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f172a;
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Lu <span>Abbey</span></a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#courses">Courses</a>
+                <a href="#ebooks">E-books</a>
+                <a href="#blog">Blog</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Social Bar - All 8 Platforms -->
+    <div class="social-bar">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://lu-abbey.blogspot.com/" target="_blank" rel="noopener">📝 Blogspot</a>
+                <a href="https://www.linkedin.com/in/lu-abbey/" target="_blank" rel="noopener">💼 LinkedIn</a>
+                <a href="https://github.com/lu-abbey" target="_blank" rel="noopener">🐙 GitHub</a>
+                <a href="https://payhip.com/luabbey" target="_blank" rel="noopener">📚 Payhip</a>
+                <a href="https://x.com/blc_chef" target="_blank" rel="noopener">𝕏 X (Twitter)</a>
+                <a href="https://www.youtube.com/@lu-abbey" target="_blank" rel="noopener">▶️ YouTube</a>
+                <a href="https://www.tiktok.com/@lu.abbey" target="_blank" rel="noopener">🎵 TikTok</a>
+                <a href="https://discord.gg/bUNZ5cBq" target="_blank" rel="noopener">💬 Discord</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>IT Support Specialist, <span>Penetration Tester</span> & Red Teamer</h1>
+                <p>Hands-on offensive security, vulnerability assessment, and threat simulation. Building secure systems through expertise in Python, C, and C++.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Explore Services</a>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="btn btn-outline">View Courses</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional IT Services</h2>
+            <p class="section-subtitle">Comprehensive technology solutions for modern businesses</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>IT Support Services</h3>
+                    <p>Remote IT support, managed services, endpoint management, and device protection for businesses of all sizes.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔒</div>
+                    <h3>Cybersecurity Services</h3>
+                    <p>Penetration testing, red teaming, threat detection, incident response, and vulnerability assessments.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud Support Services</h3>
+                    <p>Cloud infrastructure management, migration, and optimization for AWS, Azure, and Google Cloud.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Software Development</h3>
+                    <p>Custom security tools, automation scripts, and business applications in Python, C++, and JavaScript.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>IT Consultancy & Strategy</h3>
+                    <p>Strategic advisory, business continuity planning, and IT risk assessment for SMBs.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📡</div>
+                    <h3>Proactive IT Monitoring</h3>
+                    <p>24/7 system monitoring, alerts, and maintenance to prevent issues before they occur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section" style="background: #f8fafc;">
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <p class="section-subtitle">What clients say about my work</p>
+            
+            <div class="testimonials-grid">
+                <!-- Mr. Osborne's Testimonial -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Lu Abbey did an exceptional job setting up our network infrastructure in Bunamwaya Kisigula Kinyarwanda Zone. The project required careful planning and execution, and he delivered beyond expectations. The network is now stable, secure, and handling our daily operations flawlessly. His attention to detail and professional approach made the entire process smooth."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MO</div>
+                        <div class="author-info">
+                            <h4>Mr. Osborne</h4>
+                            <p>Business Owner, Bunamwaya</p>
+                            <span class="project-location">📍 Kisigula, Kinyarwanda Zone</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Working with Lu on our cybersecurity audit was eye-opening. He identified vulnerabilities we never knew existed and implemented robust solutions. His expertise in penetration testing is top-notch."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div class="author-info">
+                            <h4>Sarah K.</h4>
+                            <p>CTO, Kampala Tech Hub</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "The IT support training Lu provided transformed our internal team. His practical approach and deep knowledge of Python automation saved us countless hours of manual work."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div class="author-info">
+                            <h4>John M.</h4>
+                            <p>IT Manager, Entebbe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="section">
+        <div class="container">
+            <h2 class="section-title">Video Courses</h2>
+            <p class="section-subtitle">Hands-on training for IT professionals and security enthusiasts</p>
+            
+            <h3 style="margin: 2rem 0 1rem; color: #0f172a;">IT Support & Administration</h3>
+            <div class="courses-grid">
+                <div class="course-card it-support">
+                    <h4>Remote IT Support Essentials</h4>
+                    <p>Master remote troubleshooting, ticketing systems, and client communication.</p>
+                    <span class="course-tag">Beginner</span>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">View on Payhip →</a>
+                </div>
+                
+                <div class="course-card it-support">
+                    <h4>Managed IT Services 101</h4>
+                    <p>Build and scale an MSP from the ground up with practical strategies.</p>
+                    <span class="course-tag">Intermediate</span>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">View on Payhip →</a>
+                </div>
+                
+                <div class="course-card it-support">
+                    <h4>Network Setup & Administration</h4>
+                    <p>Configure routers, switches, firewalls, and troubleshoot complex networks.</p>
+                    <span class="course-tag">Intermediate</span>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">View on Payhip →</a>
+                </div>
+            </div>
+
+            <h3 style="margin: 3rem 0 1rem; color: #0f172a;">Cybersecurity & Penetration Testing</h3>
+            <div class="courses-grid">
+                <div class="course-card cybersecurity">
+                    <h4>Cybersecurity for Small Businesses</h4>
+                    <p>Practical security measures for SMBs with limited budgets and resources.</p>
+                    <span class="course-tag">Beginner</span>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">View on Payhip →</a>
+                </div>
+                
+                <div class="course-card cybersecurity">
+                    <h4>Network Security & Firewalls</h4>
+                    <p>Hardening networks, firewall rules, IDS/IPS, and secure architecture.</p>
+                    <span class="course-tag">Advanced</span>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">View on Payhip →</a>
+                </div>
+                
+                <div class="course-card cybersecurity">
+                    <h4>Incident Response & Threat Detection</h4>
+                    <p>Detect breaches, contain threats, and recover from security incidents.</p>
+                    <span class="course-tag">Intermediate</span>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">View on Payhip →</a>
+                </div>
+            </div>
+
+            <h3 style="margin: 3rem 0 1rem; color: #0f172a;">Programming & Automation</h3>
+            <div class="courses-grid">
+                <div class="course-card programming">
+                    <h4>Python for IT Automation</h4>
+                    <p>Automate repetitive tasks, network scans, and system administration.</p>
+                    <span class="course-tag">Beginner</span>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">View on Payhip →</a>
+                </div>
+                
+                <div class="course-card programming">
+                    <h4>C++ for System & Network Tools</h4>
+                    <p>Build high-performance security tools and network utilities.</p>
+                    <span class="course-tag">Advanced</span>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">View on Payhip →</a>
+                </div>
+                
+                <div class="course-card programming">
+                    <h4>PowerShell & Windows Automation</h4>
+                    <p>Master PowerShell for Windows administration and automation.</p>
+                    <span class="course-tag">Intermediate</span>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">View on Payhip →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-books Section - 9 Books -->
+    <section id="ebooks" class="section" style="background: #f8fafc;">
+        <div class="container">
+            <h2 class="section-title">E-books & Guides</h2>
+            <p class="section-subtitle">In-depth resources to level up your IT and security skills</p>
+            
+            <div class="ebooks-grid">
+                <!-- Book 1 -->
+                <div class="ebook-card">
+                    <div class="ebook-icon">📘</div>
+                    <h3>IT Support Handbook</h3>
+                    <p>Complete guide to modern IT support, troubleshooting, and client management.</p>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">Buy on Payhip →</a>
+                </div>
+                
+                <!-- Book 2 -->
+                <div class="ebook-card">
+                    <div class="ebook-icon">🔐</div>
+                    <h3>Cybersecurity Fundamentals</h3>
+                    <p>Essential security concepts every IT professional should know.</p>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">Buy on Payhip →</a>
+                </div>
+                
+                <!-- Book 3 -->
+                <div class="ebook-card">
+                    <div class="ebook-icon">🐍</div>
+                    <h3>Python for Security</h3>
+                    <p>Build your own security tools with Python automation scripts.</p>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">Buy on Payhip →</a>
+                </div>
+                
+                <!-- Book 4 -->
+                <div class="ebook-card">
+                    <div class="ebook-icon">🔧</div>
+                    <h3>Network Troubleshooting Guide</h3>
+                    <p>Diagnose and resolve complex network issues like a pro.</p>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">Buy on Payhip →</a>
+                </div>
+                
+                <!-- Book 5 -->
+                <div class="ebook-card">
+                    <div class="ebook-icon">🖥️</div>
+                    <h3>Windows Server Administration</h3>
+                    <p>Master Active Directory, Group Policy, and server management.</p>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">Buy on Payhip →</a>
+                </div>
+                
+                <!-- Book 6 -->
+                <div class="ebook-card">
+                    <div class="ebook-icon">☁️</div>
+                    <h3>Cloud Security Essentials</h3>
+                    <p>Secure AWS, Azure, and Google Cloud environments effectively.</p>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">Buy on Payhip →</a>
+                </div>
+                
+                <!-- Book 7 -->
+                <div class="ebook-card">
+                    <div class="ebook-icon">📝</div>
+                    <h3>Penetration Testing Methodology</h3>
+                    <p>Step-by-step approach to professional ethical hacking engagements.</p>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">Buy on Payhip →</a>
+                </div>
+                
+                <!-- Book 8 -->
+                <div class="ebook-card">
+                    <div class="ebook-icon">⚙️</div>
+                    <h3>PowerShell Automation Guide</h3>
+                    <p>Automate Windows tasks, reporting, and system management.</p>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">Buy on Payhip →</a>
+                </div>
+                
+                <!-- Book 9 -->
+                <div class="ebook-card">
+                    <div class="ebook-icon">📊</div>
+                    <h3>Disaster Recovery Planning</h3>
+                    <p>Create bulletproof backup strategies and business continuity plans.</p>
+                    <a href="https://payhip.com/luabbey" target="_blank" class="course-link">Buy on Payhip →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview Section - 9 Tabs -->
+    <section id="blog" class="section">
+        <div class="container">
+            <h2 class="section-title">Latest from the Blog</h2>
+            <p class="section-subtitle">Insights, tutorials, and updates from my IT journey</p>
+            
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <div class="blog-tab" onclick="window.open('https://lu-abbey.blogspot.com/', '_blank')">
+                    <div class="blog-tab-image">🔒</div>
+                    <div class="blog-tab-content">
+                        <div class="blog-tab-date">March 15, 2024</div>
+                        <h3 class="blog-tab-title">5 Essential Security Practices for Small Businesses</h3>
+                        <p class="blog-tab-excerpt">Simple yet effective security measures every SMB should implement today to protect against common threats.</p>
+                        <span class="blog-tab-link">Read More →</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="blog-tab" onclick="window.open('https://lu-abbey.blogspot.com/', '_blank')">
+                    <div class="blog-tab-image">🌐</div>
+                    <div class="blog-tab-content">
+                        <div class="blog-tab-date">March 10, 2024</div>
+                        <h3 class="blog-tab-title">Network Setup Success: Bunamwaya Case Study</h3>
+                        <p class="blog-tab-excerpt">How we designed and implemented a robust network infrastructure for Mr. Osborne's business in Kisigula.</p>
+                        <span class="blog-tab-link">Read More →</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="blog-tab" onclick="window.open('https://lu-abbey.blogspot.com/', '_blank')">
+                    <div class="blog-tab-image">🐍</div>
+                    <div class="blog-tab-content">
+                        <div class="blog-tab-date">March 5, 2024</div>
+                        <h3 class="blog-tab-title">Python Scripts Every IT Pro Should Know</h3>
+                        <p class="blog-tab-excerpt">10 essential Python scripts to automate your daily IT tasks and save hours of manual work.</p>
+                        <span class="blog-tab-link">Read More →</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="blog-tab" onclick="window.open('https://lu-abbey.blogspot.com/', '_blank')">
+                    <div class="blog-tab-image">🛡️</div>
+                    <div class="blog-tab-content">
+                        <div class="blog-tab-date">February 28, 2024</div>
+                        <h3 class="blog-tab-title">Red Teaming 101: Getting Started</h3>
+                        <p class="blog-tab-excerpt">An introduction to red teaming concepts, methodologies, and tools for aspiring security professionals.</p>
+                        <span class="blog-tab-link">Read More →</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 5 -->
+                <div class="blog-tab" onclick="window.open('https://lu-abbey.blogspot.com/', '_blank')">
+                    <div class="blog-tab-image">☁️</div>
+                    <div class="blog-tab-content">
+                        <div class="blog-tab-date">February 20, 2024</div>
+                        <h3 class="blog-tab-title">Cloud Migration: Lessons Learned</h3>
+                        <p class="blog-tab-excerpt">Key considerations and common pitfalls when moving your infrastructure to the cloud.</p>
+                        <span class="blog-tab-link">Read More →</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 6 -->
+                <div class="blog-tab" onclick="window.open('https://lu-abbey.blogspot.com/', '_blank')">
+                    <div class="blog-tab-image">⚙️</div>
+                    <div class="blog-tab-content">
+                        <div class="blog-tab-date">February 15, 2024</div>
+                        <h3 class="blog-tab-title">PowerShell for Windows Administration</h3>
+                        <p class="blog-tab-excerpt">Master PowerShell commands to manage users, groups, and system settings efficiently.</p>
+                        <span class="blog-tab-link">Read More →</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 7 -->
+                <div class="blog-tab" onclick="window.open('https://lu-abbey.blogspot.com/', '_blank')">
+                    <div class="blog-tab-image">📊</div>
+                    <div class="blog-tab-content">
+                        <div class="blog-tab-date">February 10, 2024</div>
+                        <h3 class="blog-tab-title">Disaster Recovery Planning Guide</h3>
+                        <p class="blog-tab-excerpt">Step-by-step guide to creating a comprehensive disaster recovery plan for your business.</p>
+                        <span class="blog-tab-link">Read More →</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 8 -->
+                <div class="blog-tab" onclick="window.open('https://lu-abbey.blogspot.com/', '_blank')">
+                    <div class="blog-tab-image">🔧</div>
+                    <div class="blog-tab-content">
+                        <div class="blog-tab-date">February 5, 2024</div>
+                        <h3 class="blog-tab-title">Troubleshooting Common Network Issues</h3>
+                        <p class="blog-tab-excerpt">Quick diagnostic techniques and solutions for the most frequent network problems.</p>
+                        <span class="blog-tab-link">Read More →</span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 9 -->
+                <div class="blog-tab" onclick="window.open('https://lu-abbey.blogspot.com/', '_blank')">
+                    <div class="blog-tab-image">📝</div>
+                    <div class="blog-tab-content">
+                        <div class="blog-tab-date">January 30, 2024</div>
+                        <h3 class="blog-tab-title">Penetration Testing Methodology</h3>
+                        <p class="blog-tab-excerpt">A structured approach to planning and executing professional penetration testing engagements.</p>
+                        <span class="blog-tab-link">Read More →</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-all-blog">
+                <a href="https://lu-abbey.blogspot.com/" target="_blank" class="btn btn-primary">View All Blog Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section" style="background: #f8fafc;">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>IT Support Specialist, Penetration Tester & Red Teamer</h3>
+                    <p>I am an IT Support Specialist, Penetration Tester, and Red Teamer with hands-on experience in offensive security, vulnerability assessment, and threat simulation. I develop offensive tools and automation scripts to test and strengthen systems, ensuring businesses stay secure against modern cyber threats.</p>
+                    <p>As a programmer, I am proficient in Python, C, and C++, building both security-focused tools and business IT solutions. I combine technical expertise with practical problem-solving to deliver secure, optimized, and reliable IT environments.</p>
+                    <p>Passionate about cybersecurity, IT support, and software development, I help organizations protect their assets, optimize infrastructure, and leverage technology efficiently.</p>
+                    
+                    <div class="skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Penetration Testing</span>
+                        <span class="skill-tag">Red Teaming</span>
+                        <span class="skill-tag">Network Security</span>
+                        <span class="skill-tag">IT Support</span>
+                        <span class="skill-tag">Cloud</span>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="emoji">👨‍💻</div>
+                    <h3>Lu Abbey</h3>
+                    <p style="color: #cbd5e1; margin-top: 1rem;">Kampala, Uganda</p>
+                    <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
+                        <a href="https://github.com/lu-abbey" target="_blank" style="color: white;">🐙</a>
+                        <a href="https://www.linkedin.com/in/lu-abbey/" target="_blank" style="color: white;">💼</a>
+                        <a href="https://x.com/blc_chef" target="_blank" style="color: white;">𝕏</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Ready to secure your business or advance your IT career?</p>
+            
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <p style="margin-bottom: 2rem; font-size: 1.1rem;">Connect with me on any platform below for inquiries, consultations, or just to network.</p>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                    <a href="https://github.com/lu-abbey" target="_blank" class="btn btn-primary" style="background: #171515;">GitHub</a>
+                    <a href="https://discord.gg/bUNZ5cBq" target="_blank" class="btn btn-primary" style="background: #5865f2;">Join Discord</a>
+                    <a href="https://www.linkedin.com/in/lu-abbey/" target="_blank" class="btn btn-primary" style="background: #0a66c2;">LinkedIn</a>
+                    <a href="https://x.com/blc_chef" target="_blank" class="btn btn-primary" style="background: #000000;">X (Twitter)</a>
+                    <a href="https://lu-abbey.blogspot.com/" target="_blank" class="btn btn-outline" style="color: #0f172a; border-color: #f57d00;">Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Lu Abbey</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#ebooks">E-books</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Platforms</h4>
+                    <ul>
+                        <li><a href="https://payhip.com/luabbey" target="_blank">Payhip Store</a></li>
+                        <li><a href="https://github.com/lu-abbey" target="_blank">GitHub</a></li>
+                        <li><a href="https://lu-abbey.blogspot.com/" target="_blank">Blog</a></li>
+                        <li><a href="https://www.youtube.com/@lu-abbey" target="_blank">YouTube</a></li>
+                        <li><a href="https://discord.gg/bUNZ5cBq" target="_blank">Discord</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/lu-abbey/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://x.com/blc_chef" target="_blank">X (Twitter)</a></li>
+                        <li><a href="https://www.tiktok.com/@lu.abbey" target="_blank">TikTok</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://discord.gg/bUNZ5cBq" target="_blank">Discord Server</a></li>
+                        <li><a href="https://www.linkedin.com/in/lu-abbey/" target="_blank">Message on LinkedIn</a></li>
+                        <li><a href="https://github.com/lu-abbey" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lu Abbey. All rights reserved. | Kampala, Uganda</p>
+                <p style="margin-top: 1rem; font-size: 0.875rem;">IT Support Specialist | Penetration Tester & Red Teamer | Offensive Tools Developer</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
